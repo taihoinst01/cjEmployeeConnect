@@ -17,6 +17,9 @@
     <Reference Include="SSODecodeCJW">
       <HintPath>..\WebSite1\Dll\SSODecodeCJW.dll</HintPath>
     </Reference>
+    <Reference Include="transceiverxnet">
+      <HintPath>wwwroot\Dll\transceiverxnet.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
