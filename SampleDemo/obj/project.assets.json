@@ -11513,11 +11513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\SampleDemo\\SampleDemo\\SampleDemo.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\cjEmployeeConnect\\SampleDemo\\SampleDemo.csproj",
       "projectName": "SampleDemo",
-      "projectPath": "C:\\Users\\User\\source\\repos\\SampleDemo\\SampleDemo\\SampleDemo.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\cjEmployeeConnect\\SampleDemo\\SampleDemo.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\SampleDemo\\SampleDemo\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\cjEmployeeConnect\\SampleDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

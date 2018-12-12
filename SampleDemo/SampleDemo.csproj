@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SSODecodeCJW">
+      <HintPath>..\WebSite1\Dll\SSODecodeCJW.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using SSODecodeCJW;
 
 namespace SampleDemo
 {
@@ -27,7 +28,13 @@ namespace SampleDemo
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                string KeyStr = "CJWKEY";
+                string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
+
+                CryptoDotNet cdn = new CryptoDotNet();
+                string PlainText = cdn.Decrypt(encryptedText, KeyStr);
+
+                await context.Response.WriteAsync(PlainText);
             });
         }
     }
