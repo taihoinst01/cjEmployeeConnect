@@ -6,6 +6,7 @@ using com.miracom.transceiverx;
 using com.miracom.transceiverx.session;
 using com.miracom.transceiverx.message;
 using System.Diagnostics;
+using Newtonsoft.Json.Linq;
 
 namespace SampleDemo.SAP
 {
@@ -62,6 +63,9 @@ namespace SampleDemo.SAP
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
 
                 //String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 5000);
+                //JObject sapJson = new JObject();
+
+                //String repData = "bbb";
 
                 //Console.WriteLine("------Reply Message...\n" + repData);
             }

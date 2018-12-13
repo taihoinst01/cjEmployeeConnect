@@ -32,14 +32,26 @@ namespace SampleDemo
 
             app.Run(async (context) =>
             {
-                string KeyStr = "CJWKEY";
-                string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
+                //string aaa = context.Request.Query.Keys.Count;
+                string aaa = context.Request.QueryString.Value;
+                string PlainText = "";
 
-                CryptoDotNet cdn = new CryptoDotNet();
-                string PlainText = cdn.Decrypt(encryptedText, KeyStr);
+                if (aaa.Equals(""))
+                {
+                    string KeyStr = "CJWKEY";
 
-                tec.call();
+                    string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
 
+                    CryptoDotNet cdn = new CryptoDotNet();
+                    PlainText  = cdn.Decrypt(encryptedText, KeyStr);
+                }
+                    else
+                {
+                    PlainText = "bbb";
+                    tec.call();
+                }
+                
+                
                 await context.Response.WriteAsync(PlainText);
             });
         }
