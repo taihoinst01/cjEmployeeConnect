@@ -40,7 +40,7 @@ namespace SampleDemo
                 //?M=DkvHa3xSeO7DWcEhcFHHug==
                 string id =context.Request.QueryString.Value;
                 await context.Response.WriteAsync(id);
-                string PlainText = "";
+                //string PlainText = "";
 
                 //if (id.Substring(0,3) != "?M=")
                 //{
