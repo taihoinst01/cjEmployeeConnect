@@ -37,11 +37,12 @@ namespace SampleDemo
             app.Run(async (context) =>
             {
                 //string aaa = context.Request.Query.Keys.Count;
-                //string aaa =context.Request.QueryString.Value;
-                string aaa = "M";
+                //?M=DkvHa3xSeO7DWcEhcFHHug==
+                string id =context.Request.QueryString.Value;
+                
                 string PlainText = "";
 
-                if (aaa.Substring(0,1) != "M")
+                if (id.Substring(0,3) != "?M=")
                 {
                     //CJ 월드
                     string KeyStr = "CJWKEY";
@@ -56,7 +57,7 @@ namespace SampleDemo
                     //get방식 진행이 된다고함
                     //SMART CJ
                     string encKey = "WC00000075531151";     // 복호화 Key 별도 전달
-                    string encrypt_uId = HttpUtility.UrlDecode("DkvHa3xSeO7DWcEhcFHHug==");
+                    string encrypt_uId = HttpUtility.UrlDecode(id.Replace("?M=", ""));
                     string decrypt_uId = SmartCJ.SSO.Utils.Decrypt(encrypt_uId, encKey);		// 복호화된 CJ월드 로그인ID
 
                     PlainText = decrypt_uId;
