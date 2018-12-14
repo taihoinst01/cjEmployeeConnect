@@ -65,7 +65,7 @@ namespace SampleDemo
                 //}
                 
                 
-                await context.Response.WriteAsync(PlainText);
+                //await context.Response.WriteAsync(PlainText);
             });
         }
     }
