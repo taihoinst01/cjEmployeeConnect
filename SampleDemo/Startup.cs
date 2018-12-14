@@ -39,30 +39,30 @@ namespace SampleDemo
                 //string aaa = context.Request.Query.Keys.Count;
                 //?M=DkvHa3xSeO7DWcEhcFHHug==
                 string id =context.Request.QueryString.Value;
-                
+                await context.Response.WriteAsync(id);
                 string PlainText = "";
 
-                if (id.Substring(0,3) != "?M=")
-                {
-                    //CJ 월드
-                    string KeyStr = "CJWKEY";
+                //if (id.Substring(0,3) != "?M=")
+                //{
+                //    //CJ 월드
+                //    string KeyStr = "CJWKEY";
 
-                    string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
+                //    string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
 
-                    CryptoDotNet cdn = new CryptoDotNet();
-                    PlainText  = cdn.Decrypt(encryptedText, KeyStr);
-                }
-                    else
-                {
-                    //get방식 진행이 된다고함
-                    //SMART CJ
-                    string encKey = "WC00000075531151";     // 복호화 Key 별도 전달
-                    string encrypt_uId = HttpUtility.UrlDecode(id.Replace("?M=", ""));
-                    string decrypt_uId = SmartCJ.SSO.Utils.Decrypt(encrypt_uId, encKey);		// 복호화된 CJ월드 로그인ID
+                //    CryptoDotNet cdn = new CryptoDotNet();
+                //    PlainText  = cdn.Decrypt(encryptedText, KeyStr);
+                //}
+                //    else
+                //{
+                //    //get방식 진행이 된다고함
+                //    //SMART CJ
+                //    string encKey = "WC00000075531151";     // 복호화 Key 별도 전달
+                //    string encrypt_uId = HttpUtility.UrlDecode(id.Replace("?M=", ""));
+                //    string decrypt_uId = SmartCJ.SSO.Utils.Decrypt(encrypt_uId, encKey);		// 복호화된 CJ월드 로그인ID
 
-                    PlainText = decrypt_uId;
-                    //tec.call();
-                }
+                //    PlainText = decrypt_uId;
+                //    //tec.call();
+                //}
                 
                 
                 await context.Response.WriteAsync(PlainText);
