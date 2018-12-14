@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SampleDemo",
+    "\\SampleDemo\\bin\\Debug\\netcoreapp2.1",
+    "\\SampleDemo\\bin\\Release",
+    "\\SampleDemo\\obj\\Debug",
+    "\\SampleDemo\\obj\\Release",
+    "\\SampleDemo\\Properties",
+    "\\SampleDemo\\wwwroot\\Dll"
+  ],
+  "SelectedNode": "\\SampleDemo\\Properties",
+  "PreviewInSolutionExplorer": false
+}
