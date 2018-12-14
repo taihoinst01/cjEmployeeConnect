@@ -52,7 +52,7 @@ namespace SampleDemo
                     CryptoDotNet cdn = new CryptoDotNet();
                     PlainText  = cdn.Decrypt(encryptedText, KeyStr);
                 }
-                    else
+                else
                 {
                     //get방식 진행이 된다고함
                     //SMART CJ
