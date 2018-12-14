@@ -17,6 +17,7 @@ C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\SampleDemo.runtimeconfig.dev.json
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\SampleDemo.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\SampleDemo.pdb
+C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\SmartCJ.SSO.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\SSODecodeCJW.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\bin\Debug\netcoreapp2.1\transceiverxnet.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.csproj.CoreCompileInputs.cache
@@ -28,4 +29,3 @@ C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.csproj.CopyComplete
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.pdb
-C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.csprojAssemblyReference.cache
