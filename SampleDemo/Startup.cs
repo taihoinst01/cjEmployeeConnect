@@ -46,7 +46,7 @@ namespace SampleDemo
                 {
                     //CJ 월드
                     string KeyStr = "CJWKEY";
-                    string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
+                    string encryptedText = id.Replace("?P=", "");
 
                     CryptoDotNet cdn = new CryptoDotNet();
                     PlainText  = cdn.Decrypt(encryptedText, KeyStr);
