@@ -29,3 +29,4 @@ C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.csproj.CopyComplete
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.dll
 C:\Users\User\source\repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.pdb
+C:\Users\User\Source\Repos\cjEmployeeConnect\SampleDemo\obj\Debug\netcoreapp2.1\SampleDemo.csprojAssemblyReference.cache
