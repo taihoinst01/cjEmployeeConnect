@@ -46,6 +46,7 @@ namespace SampleDemo
                 {
                     //CJ 월드
                     string KeyStr = "CJWKEY";
+
                     string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA";
 
                     CryptoDotNet cdn = new CryptoDotNet();
