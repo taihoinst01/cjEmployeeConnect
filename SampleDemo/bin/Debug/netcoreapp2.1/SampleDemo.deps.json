@@ -27,6 +27,7 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
+          "SmartCJ.SSO": "1.0.0.0",
           "SSODecodeCJW": "1.0.0.0",
           "transceiverxnet": "7.0.0.0"
         },
@@ -207,6 +208,17 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "SmartCJ.SSO/1.0.0.0": {
+        "runtime": {
+          "SmartCJ.SSO.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "SmartCJ.SSO.dll": {}
         }
       },
       "SSODecodeCJW/1.0.0.0": {
@@ -3234,6 +3246,11 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "SmartCJ.SSO/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "SSODecodeCJW/1.0.0.0": {
       "type": "reference",

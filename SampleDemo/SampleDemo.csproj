@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="SmartCJ.SSO">
+      <HintPath>wwwroot\Dll\SmartCJ.SSO.dll</HintPath>
+    </Reference>
     <Reference Include="SSODecodeCJW">
       <HintPath>..\WebSite1\Dll\SSODecodeCJW.dll</HintPath>
     </Reference>
