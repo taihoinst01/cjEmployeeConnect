@@ -73,6 +73,7 @@ namespace SampleDemo
                     //값구분 작업 필요
 
                     //tec.call();
+                    PlainText = "S";
                 }
                 await context.Response.WriteAsync(PlainText);
             });
