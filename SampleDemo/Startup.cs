@@ -42,7 +42,7 @@ namespace SampleDemo
                 
                 string PlainText = "";
 
-                if (id.Substring(0,3) != "?M=")
+                if (id.Substring(0,3) == "?P=")
                 {
                     //CJ 월드
                     string KeyStr = "CEJKSP";
@@ -56,7 +56,7 @@ namespace SampleDemo
                     CryptoDotNet cdn = new CryptoDotNet();
                     PlainText = cdn.Decrypt(encryptedText, KeyStr);
                 }
-                else if(id.Substring(0, 3) != "?P=")
+                else if(id.Substring(0, 3) == "?M=")
                 {
                     //get방식 진행이 된다고함
                     //SMART CJ
