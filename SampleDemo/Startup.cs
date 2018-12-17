@@ -12,6 +12,8 @@ using Microsoft.VisualBasic.CompilerServices;
 using System.Web;
 using SmartCJ.SSO;
 using System.Text;
+using System.Security.Cryptography;
+using System.Diagnostics;
 
 namespace SampleDemo
 {
@@ -36,8 +38,6 @@ namespace SampleDemo
 
             app.Run(async (context) =>
             {
-                //string aaa = context.Request.Query.Keys.Count;
-                //?M=DkvHa3xSeO7DWcEhcFHHug==
                 string id =context.Request.QueryString.Value;
                 
                 string PlainText = "";
@@ -45,13 +45,18 @@ namespace SampleDemo
                 if (id.Substring(0,3) != "?M=")
                 {
                     //CJ 월드
-                    string KeyStr = "CJWKEY";
+                    string KeyStr = "CEJKSP";
+                    
                     string encryptedText = id.Replace("?P=", "");
 
+                    // CJWKEY 로  8evVae2ekt7WtC2umaHAqYVyhf2W9eNA 을 decrypt 결과는 cjwsampleuser 입니다. 
+                    // KeyStr ="CJWKEY";
+                    //string encryptedText = "8evVae2ekt7WtC2umaHAqYVyhf2W9eNA"
+                    
                     CryptoDotNet cdn = new CryptoDotNet();
-                    PlainText  = cdn.Decrypt(encryptedText, KeyStr);
+                    PlainText = cdn.Decrypt(encryptedText, KeyStr);
                 }
-                else
+                else if(id.Substring(0, 3) != "?P=")
                 {
                     //get방식 진행이 된다고함
                     //SMART CJ
@@ -62,10 +67,58 @@ namespace SampleDemo
                     PlainText = decrypt_uId;
                     //tec.call();
                 }
-                
-                
+                else
+                {
+                    string str = id.Replace("?T=", "");
+                    //값구분 작업 필요
+
+                    //tec.call();
+                }
                 await context.Response.WriteAsync(PlainText);
             });
         }
+
+        public static string Encrypt(string toEncrypt, bool useHashing)
+        {
+            byte[] keyArray;
+            byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(toEncrypt);
+
+            // Get the key from config file
+
+            string key = "IDANNM";
+            //System.Windows.Forms.MessageBox.Show(key);
+            //If hashing use get hashcode regards to your key
+            if (useHashing)
+            {
+                MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                //Always release the resources and flush data
+                //of the Cryptographic service provide. Best Practice
+
+                hashmd5.Clear();
+            }
+            else
+            {
+                keyArray = UTF8Encoding.UTF8.GetBytes(key);
+            }               
+
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+            //set the secret key for the tripleDES algorithm
+            tdes.Key = keyArray;
+            //mode of operation. there are other 4 modes. We choose ECB(Electronic code Book)
+            tdes.Mode = CipherMode.ECB;
+            //padding mode(if any extra byte added)
+            tdes.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform cTransform = tdes.CreateEncryptor();
+            //transform the specified region of bytes array to resultArray
+            byte[] resultArray = cTransform.TransformFinalBlock
+                    (toEncryptArray, 0, toEncryptArray.Length);
+            //Release resources held by TripleDes Encryptor
+            tdes.Clear();
+            //Return the encrypted data into unreadable string format
+            return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+        }
+
     }
 }
