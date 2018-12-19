@@ -13,7 +13,7 @@ namespace SampleDemo.SAP
     public class TestEaiCall
     {
         //static void Main(string[] args)
-        public void call()
+        public String call(string userId, string sabun, string reissue)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace SampleDemo.SAP
                 data = data + "   'EAI_REQUEST': { ";
                 data = data + "     'INTERFACE_INFO': { ";
                 data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
-                data = data + "       'UUID': 'CJ_CHATBOT_2016021812253212', ";
+                data = data + "       'UUID': 'CJ_CHATBOT_"+ System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "', ";
                 //data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
                 data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
                 data = data + "       'OPTIONAL_2': 'CHATBOT' ";
@@ -62,16 +62,18 @@ namespace SampleDemo.SAP
 
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
 
-                //String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 5000);
+                String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 5000);
                 //JObject sapJson = new JObject();
 
                 //String repData = "bbb";
 
                 //Console.WriteLine("------Reply Message...\n" + repData);
+                return repData;
             }
             catch (TrxException ex)
             {
                 Debug.WriteLine(ex.ToString());
+                return "";
             }
         }
     }
