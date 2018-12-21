@@ -54,8 +54,8 @@ namespace SampleDemo.SAP
                 //data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
                 data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
                 data = data + "       'OPTIONAL_2': 'CHATBOT' ";
-                data = data + "       'OPTIONAL_3': '' ";
-                data = data + "       'OPTIONAL_4': '' ";
+                //data = data + "       'OPTIONAL_3': '' ";
+                //data = data + "       'OPTIONAL_4': '' ";
                 data = data + "     }, ";
                 data = data + "     'INPUT_DATA': { ";
                 data = data + "       'P_ID': 'chatbot01',  ";
