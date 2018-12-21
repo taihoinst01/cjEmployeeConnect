@@ -42,6 +42,10 @@ namespace SampleDemo.SAP
                 //data = data + "</INPUT_DATA>";
                 //data = data + "</EAI_REQUEST>";
 
+                //전사 ERP(PRD) -> CJ_SAP(개발서버 cjerpdev / 52.2.199.15)
+                //전사 BI(BIP) -> CJ_BI(개발서버 cjbidev / 52.2.199.6)
+                //해외 BI(BW1) -> CJG_BI(개발서버 globwdev / 52.2.199.23)
+
                 String data = " { ";
                 data = data + "   'EAI_REQUEST': { ";
                 data = data + "     'INTERFACE_INFO': { ";
@@ -54,8 +58,8 @@ namespace SampleDemo.SAP
                 data = data + "       'OPTIONAL_4': '' ";
                 data = data + "     }, ";
                 data = data + "     'INPUT_DATA': { ";
-                data = data + "       'P_ID': 'CJ월드ID',  ";
-                data = data + "       'P_NUMxP_PERNR': '사번',";
+                data = data + "       'P_ID': 'chatbot01',  ";
+                data = data + "       'P_NUMxP_PERNR': '123456',";
                 data = data + "       'P_TEXT': '재발급사유(5글자이상)' ";
                 data = data + "     } ";
                 data = data + "   }";
