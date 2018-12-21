@@ -71,7 +71,7 @@ namespace SampleDemo.SAP
                 //JObject sapJson = new JObject();
 
                 //String repData = "bbb";
-
+                HistoryLog("repData = " + repData);
                 //Console.WriteLine("------Reply Message...\n" + repData);
                 return repData;
             }
