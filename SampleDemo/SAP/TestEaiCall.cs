@@ -23,7 +23,7 @@ namespace SampleDemo.SAP
                 // 채널시스템 구분
                 String systemID = "CJ_CHATBOT";
                 // 인터페이스ID ==> 연계 업무마다 정의됨
-                String interfaceID = "MxZSAP_PASSCHANGE_EKP";
+                String interfaceID = "CJ_HelpDesk";
                 // EAI호출프로그램명 ==> 구분가능한 프로그램명
                 String sessionName = "APP_PRG_NAME";
 
