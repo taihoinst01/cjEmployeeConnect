@@ -21,11 +21,11 @@ namespace SampleDemo.SAP
                 H101EaiCall eai = new H101EaiCall();
 
                 // 채널시스템 구분
-                String systemID = "CJ_CHATBOT";
+                String systemID = "CJ_HelpDesk";
                 // 인터페이스ID ==> 연계 업무마다 정의됨
-                String interfaceID = "CJ_HelpDesk";
+                String interfaceID = "MxZSAP_PASSCHANGE_EKP";
                 // EAI호출프로그램명 ==> 구분가능한 프로그램명
-                String sessionName = "APP_PRG_NAME";
+                String sessionName = "CJ_CHATBOT";
 
                 //String data = "<?xml version='1.0' encoding='UTF-8'?>";
                 //data = data + "<EAI_REQUEST>";
