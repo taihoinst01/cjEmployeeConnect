@@ -13,7 +13,8 @@ namespace SampleDemo.SAP
         //private const String connectString = "scmbodev:10101";  // x
         //private const String connectString = "scmbodev.cjad.net:10101";  // x
         //private const String connectString = "http://scmbodev.cjad.net:10101";  // x
-        private const String connectString = "scmbo_dev.cjad.net:10101";  // x
+        //private const String connectString = "scmbo_dev.cjad.net:10101";  // x
+        private const String connectString = "scmbo_dev:10101";  // x
 
         private Session ioiSession = null;
         private int sessionMode = Session_Fields.SESSION_INTER_STATION_MODE |
