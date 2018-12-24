@@ -60,7 +60,7 @@ namespace SampleDemo.SAP
                 data = data + "     'INPUT_DATA': { ";
                 data = data + "       'P_ID': 'chatbot01',  ";
                 data = data + "       'P_NUMxP_PERNR': '123456',";
-                data = data + "       'P_TEXT': '재발급사유(5글자이상)' ";
+                data = data + "       'P_TEXT': 'ABCDEFGHI' ";
                 data = data + "     } ";
                 data = data + "   }";
                 data = data + " } ";
