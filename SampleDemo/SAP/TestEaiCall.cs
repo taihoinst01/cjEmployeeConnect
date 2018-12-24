@@ -67,7 +67,7 @@ namespace SampleDemo.SAP
 
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
                 HistoryLog("repData = " + data);
-                String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 50000);
+                String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 5000);
                 //JObject sapJson = new JObject();
 
                 //String repData = "bbb";
