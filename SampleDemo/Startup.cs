@@ -78,7 +78,7 @@ namespace SampleDemo
                     string userId = "";
                     string sabun = "";
                     string reissue = "";
-
+                     
                     string sapInitResult = tec.call(userId, sabun, reissue);
                     PlainText = sapInitResult;
                 }
