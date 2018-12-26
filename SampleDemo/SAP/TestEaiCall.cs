@@ -27,44 +27,44 @@ namespace SampleDemo.SAP
                 // EAI호출프로그램명 ==> 구분가능한 프로그램명
                 String sessionName = "CJ_CHATBOT";
 
-                //String data = "<?xml version='1.0' encoding='UTF-8'?>";
-                //data = data + "<EAI_REQUEST>";
-                //data = data + "<INTERFACE_INFO>";
-                //data = data + "<REQUEST_SYSTEM>CJ_Feed_CJONE</REQUEST_SYSTEM>";
-                //data = data + "<UUID>CJ_Feed_CJONE_20160226172910785</UUID>";
-                //data = data + "<OPTIONAL_1/>";
-                //data = data + "<OPTIONAL_2/>";
-                //data = data + "<OPTIONAL_3/>";
-                //data = data + "<OPTIONAL_4/>";
-                //data = data + "</INTERFACE_INFO>";
-                //data = data + "<INPUT_DATA>";
-                //data = data + "<I_KUNNR>0000200873</I_KUNNR>";
-                //data = data + "</INPUT_DATA>";
-                //data = data + "</EAI_REQUEST>";
+                String data = "<?xml version='1.0' encoding='UTF-8'?>";
+                data = data + "<EAI_REQUEST>";
+                data = data + "<INTERFACE_INFO>";
+                data = data + "<REQUEST_SYSTEM>CJ_HelpDesk</REQUEST_SYSTEM>";
+                data = data + "<UUID>CJ_CHATBOT_" + System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "</UUID>";
+                data = data + "<OPTIONAL_1>CJ_SAP<OPTIONAL_1/>";
+                data = data + "<OPTIONAL_2>CHATBOT<OPTIONAL_2/>";
+                data = data + "</INTERFACE_INFO>";
+                data = data + "<INPUT_DATA>";
+                data = data + "<P_ID>chatbot01</P_ID>";
+                data = data + "<P_NUMxP_PERNR>chatbot01</P_NUMxP_PERNR>";
+                data = data + "<P_TEXT>ABCDEFGHI</P_TEXT>";
+                data = data + "</INPUT_DATA>";
+                data = data + "</EAI_REQUEST>";
 
                 //전사 ERP(PRD) -> CJ_SAP(개발서버 cjerpdev / 52.2.199.15)
                 //전사 BI(BIP) -> CJ_BI(개발서버 cjbidev / 52.2.199.6)
                 //해외 BI(BW1) -> CJG_BI(개발서버 globwdev / 52.2.199.23)
 
-                String data = " { ";
-                data = data + "   'EAI_REQUEST': { ";
-                data = data + "     'INTERFACE_INFO': { ";
-                //data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
-                data = data + "       'REQUEST_SYSTEM': 'CJ_HelpDesk', ";
-                data = data + "       'UUID': 'CJ_CHATBOT_"+ System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "', ";
-                //data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
-                data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
-                data = data + "       'OPTIONAL_2': 'CHATBOT' ";
-                //data = data + "       'OPTIONAL_3': '' ";
-                //data = data + "       'OPTIONAL_4': '' ";
-                data = data + "     }, ";
-                data = data + "     'INPUT_DATA': { ";
-                data = data + "       'P_ID': 'chatbot01',  ";
-                data = data + "       'P_NUMxP_PERNR': '123456',";
-                data = data + "       'P_TEXT': 'ABCDEFGHI' ";
-                data = data + "     } ";
-                data = data + "   } ";
-                data = data + " } ";
+                //String data = " { ";
+                //data = data + "   'EAI_REQUEST': { ";
+                //data = data + "     'INTERFACE_INFO': { ";
+                ////data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
+                //data = data + "       'REQUEST_SYSTEM': 'CJ_HelpDesk', ";
+                //data = data + "       'UUID': 'CJ_CHATBOT_"+ System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "', ";
+                ////data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
+                //data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
+                //data = data + "       'OPTIONAL_2': 'CHATBOT' ";
+                ////data = data + "       'OPTIONAL_3': '' ";
+                ////data = data + "       'OPTIONAL_4': '' ";
+                //data = data + "     }, ";
+                //data = data + "     'INPUT_DATA': { ";
+                //data = data + "       'P_ID': 'chatbot01',  ";
+                //data = data + "       'P_NUMxP_PERNR': '123456',";
+                //data = data + "       'P_TEXT': 'ABCDEFGHI' ";
+                //data = data + "     } ";
+                //data = data + "   } ";
+                //data = data + " } ";
 
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
                 HistoryLog("repData = " + data);
