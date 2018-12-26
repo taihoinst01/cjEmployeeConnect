@@ -73,11 +73,11 @@ namespace SampleDemo
                     string str = id.Replace("?T=", "");
 
                     //string urlParameter = "&sabun=" + sabun + "sabun=" + uData[0].reissue;
-                    
+                    string[] urlParameter = str.Split("&");
                     //아이디, 사번, 재발급 사유 
-                    string userId = "";
-                    string sabun = "";
-                    string reissue = "";
+                    string userId = urlParameter[0].Replace("userid=", "");
+                    string sabun = urlParameter[1].Replace("sabun=", "");
+                    string reissue = urlParameter[2].Replace("reissue=", "");
 
                     string sapInitResult = tec.call(userId, sabun, reissue);
 
