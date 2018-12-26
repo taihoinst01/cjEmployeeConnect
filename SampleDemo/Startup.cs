@@ -78,8 +78,9 @@ namespace SampleDemo
                     string userId = urlParameter[0].Replace("userid=", "");
                     string sabun = urlParameter[1].Replace("sabun=", "");
                     string reissue = urlParameter[2].Replace("reissue=", "");
+                    string optional_1 = urlParameter[3].Replace("optional_1=", "");
 
-                    string sapInitResult = tec.call(userId, sabun, reissue);
+                    string sapInitResult  = tec.call(userId, sabun, reissue, optional_1);
 
                     string utf = "<!DOCTYPE html><html xmlns = \"http://www.w3.org/1999/xhtml\" ><head><meta charset=\"utf-8\" ><title>CJ Employee</title></ head><body>"+ sapInitResult + "</body></html>";
                     PlainText = utf;
