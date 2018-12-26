@@ -49,7 +49,8 @@ namespace SampleDemo.SAP
                 String data = " { ";
                 data = data + "   'EAI_REQUEST': { ";
                 data = data + "     'INTERFACE_INFO': { ";
-                data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
+                //data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
+                data = data + "       'REQUEST_SYSTEM': 'CJ_HelpDesk', ";
                 data = data + "       'UUID': 'CJ_CHATBOT_"+ System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "', ";
                 //data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
                 data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
@@ -62,7 +63,7 @@ namespace SampleDemo.SAP
                 data = data + "       'P_NUMxP_PERNR': '123456',";
                 data = data + "       'P_TEXT': 'ABCDEFGHI' ";
                 data = data + "     } ";
-                data = data + "   }";
+                data = data + "   } ";
                 data = data + " } ";
 
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
