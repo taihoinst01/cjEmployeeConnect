@@ -4,6 +4,7 @@ using System.Text;
 using com.miracom.transceiverx;
 using com.miracom.transceiverx.session;
 using com.miracom.transceiverx.message;
+using System.IO;
 
 namespace SampleDemo.SAP
 {
@@ -26,10 +27,15 @@ namespace SampleDemo.SAP
             try
             {
                 ioiSession = Transceiver.createSession(sessionName, sessionMode);
+                HistoryLog("1111");
                 ioiSession.addSessionEventListener(this);
+                HistoryLog("2222");
                 ioiSession.setAutoRecovery(true);
+                HistoryLog("3333");
                 ioiSession.setDefaultTTL(60000);
+                HistoryLog("4444");
                 ioiSession.connect(connectString);
+                HistoryLog("5555");
             }
             catch (SessionException ex)
             {
