@@ -57,8 +57,9 @@ namespace SampleDemo.SAP
                 msg.setDeliveryMode(this.msgDeliveryType);
                 msg.setTTL(ttl);
                 Encoding en = Encoding.UTF8;
+                HistoryLog("contents=" + contents);
                 msg.setData(en.GetBytes(contents));
-                HistoryLog("msg.getData()=" + msg.getData());
+                HistoryLog("msg=" + msg);
                 Message reply = ioiSession.sendRequest(msg);
                 HistoryLog("reply=" + reply);
                 if (reply == null)
