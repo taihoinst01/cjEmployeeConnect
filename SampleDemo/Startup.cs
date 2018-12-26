@@ -14,6 +14,7 @@ using SmartCJ.SSO;
 using System.Text;
 using System.Security.Cryptography;
 using System.Diagnostics;
+using System.IO;
 
 namespace SampleDemo
 {
@@ -76,10 +77,10 @@ namespace SampleDemo
                     string[] urlParameter = str.Split("&");
                     //아이디, 사번, 재발급 사유 
 
-                    string userId = urlParameter[0].Replace("userid=", "");
-                    string sabun = urlParameter[1].Replace("sabun=", "");
-                    string reissue = urlParameter[2].Replace("reissue=", "");
-                    string optional_1 = urlParameter[3].Replace("optional_1=", "");
+                    string userId = urlParameter[1].Replace("userid=", "");
+                    string sabun = urlParameter[2].Replace("sabun=", "");
+                    string reissue = urlParameter[3].Replace("reissue=", "");
+                    string optional_1 = urlParameter[4].Replace("optional_1=", "");
                     reissue = System.Web.HttpUtility.UrlDecode(reissue);
                     string sapInitResult  = tec.call(userId, sabun, reissue, optional_1);
 
