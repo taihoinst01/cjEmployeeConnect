@@ -63,7 +63,7 @@ namespace SampleDemo.SAP
                 data = data + "     'INPUT_DATA': { ";
                 data = data + "       'P_ID': 'chatbot01',  ";
                 data = data + "       'P_NUMxP_PERNR': '123456',";
-                data = data + "       'P_TEXT': '비밀번호바꿔주세요' ";
+                data = data + "       'P_TEXT': 'ABCDEFGHI' ";
                 data = data + "     } ";
                 data = data + "   } ";
                 data = data + " } ";
