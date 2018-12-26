@@ -78,9 +78,11 @@ namespace SampleDemo
                     string userId = "";
                     string sabun = "";
                     string reissue = "";
-                     
+
                     string sapInitResult = tec.call(userId, sabun, reissue);
-                    PlainText = sapInitResult;
+
+                    string utf = "<!DOCTYPE html><html xmlns = \"http://www.w3.org/1999/xhtml\" ><head><meta charset=\"utf-8\" ><title>CJ Employee</title></ head><body>"+ sapInitResult + "</body></html>";
+                    PlainText = utf;
                 }
                 await context.Response.WriteAsync(PlainText);
             });

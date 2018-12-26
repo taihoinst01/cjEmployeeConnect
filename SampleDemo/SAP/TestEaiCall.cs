@@ -75,12 +75,18 @@ namespace SampleDemo.SAP
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
                 HistoryLog("Data = " + data);
                 String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 60000);
+                
+                //JObject repData = JObject.Parse("{\"RESPONSE_INFO\":[{\"RESPONSE_CODE\":\"S\",\"RESPONSE_MESSAGE\":\"SUCCESS\",\"RESPONSE_SYSTEM\":\"CJG_BI\",\"UUID\":\"CJ_CHATBOT_2018122608132712\",\"EAI_RESPONSETIME\":\"20181226171328\"}],\"E_RETURN\":[{\"CODE\":\"E\",\"MESSAGE\":\"비밀번호 변경사유를 5자리 이상 입력하세요.\"}]}");
                 HistoryLog("repData = " + repData);
                 //JObject sapJson = new JObject();
                 //String repData = "bbb";
+                JObject sapJson = JObject.Parse(repData);
+                String sapMessage = "";
+
+                sapMessage = sapJson.Last.Last.Last.Last.Last.ToString();
 
                 //Console.WriteLine("------Reply Message...\n" + repData);
-                return repData;
+                return sapMessage;
             }
             catch (TrxException ex)
             {
