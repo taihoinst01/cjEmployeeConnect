@@ -39,7 +39,7 @@ namespace SampleDemo.SAP
                 //data = data + "</INTERFACE_INFO>";
                 //data = data + "<INPUT_DATA>";
                 //data = data + "<P_ID>chatbot01</P_ID>";
-                //data = data + "<P_NUMxP_PERNR>chatbot01</P_NUMxP_PERNR>";
+                //data = data + "<P_NUMxP_PERNR>123456</P_NUMxP_PERNR>";
                 //data = data + "<P_TEXT>ABCDEFGHI</P_TEXT>";
                 //data = data + "</INPUT_DATA>";
                 //data = data + "</EAI_REQUEST>";
@@ -49,7 +49,7 @@ namespace SampleDemo.SAP
                 //해외 BI(BW1) -> CJG_BI(개발서버 globwdev / 52.2.199.23)
 
                 String data = " { ";
-                data = data + "   'EAI_REQUEST': { ";
+                //data = data + "   'EAI_REQUEST': { ";
                 data = data + "     'INTERFACE_INFO': [ ";
                 //data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
                 data = data + "       { ";
@@ -69,7 +69,7 @@ namespace SampleDemo.SAP
                 data = data + "       'P_TEXT': 'ABCDEFGHI' ";
                 data = data + "     } ";
                 data = data + "   ] ";
-                data = data + "   } ";
+                //data = data + "   } ";
                 data = data + " } ";
                  
                 Debug.WriteLine("------START Send Request Message...\n" + data + "------END Send Request Message...\n");
