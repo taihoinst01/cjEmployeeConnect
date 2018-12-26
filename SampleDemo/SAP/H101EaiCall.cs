@@ -52,8 +52,9 @@ namespace SampleDemo.SAP
                 msg.setTTL(ttl);
                 Encoding en = Encoding.UTF8;
                 msg.setData(en.GetBytes(contents));
-
+                HistoryLog("msg.getData()=" + msg.getData());
                 Message reply = ioiSession.sendRequest(msg);
+                HistoryLog("reply=" + reply);
                 if (reply == null)
                     throw new TrxException(TrxException.INVALID_MESSAGE);
                 strRep = en.GetString(reply.getData());
@@ -96,5 +97,38 @@ namespace SampleDemo.SAP
         }
 
         #endregion
+
+        public static void HistoryLog(String strMsg)
+        {
+            try
+            {
+                //Debug.WriteLine("AppDomain.CurrentDomain.BaseDirectory : " + AppDomain.CurrentDomain.BaseDirectory);
+                string m_strLogPrefix = AppDomain.CurrentDomain.BaseDirectory + @"LOG\";
+                string m_strLogExt = @".LOG";
+                DateTime dtNow = DateTime.Now;
+                string strDate = dtNow.ToString("yyyy-MM-dd");
+                string strPath = String.Format("{0}{1}{2}", m_strLogPrefix, strDate, m_strLogExt);
+                string strDir = Path.GetDirectoryName(strPath);
+                DirectoryInfo diDir = new DirectoryInfo(strDir);
+
+                if (!diDir.Exists)
+                {
+                    diDir.Create();
+                    diDir = new DirectoryInfo(strDir);
+                }
+
+                if (diDir.Exists)
+                {
+                    System.IO.StreamWriter swStream = File.AppendText(strPath);
+                    string strLog = String.Format("{0}: {1}", dtNow.ToString("MM/dd/yyyy hh:mm:ss.fff"), strMsg);
+                    swStream.WriteLine(strLog);
+                    swStream.Close(); ;
+                }
+            }
+            catch (System.Exception e)
+            {
+                HistoryLog(e.Message);
+            }
+        }
     }
 }
