@@ -71,7 +71,7 @@ namespace SampleDemo
                 {
                     //sap 비밀번호 초기화
                     string str = id.Replace("?T=", "");
-
+                    HistoryLog("str=" + str);
                     //string urlParameter = "&sabun=" + sabun + "sabun=" + uData[0].reissue;
                     string[] urlParameter = str.Split("&");
                     //아이디, 사번, 재발급 사유 
@@ -133,6 +133,37 @@ namespace SampleDemo
         }
 
 
+        public static void HistoryLog(String strMsg)
+        {
+            try
+            {
+                //Debug.WriteLine("AppDomain.CurrentDomain.BaseDirectory : " + AppDomain.CurrentDomain.BaseDirectory);
+                string m_strLogPrefix = AppDomain.CurrentDomain.BaseDirectory + @"LOG\";
+                string m_strLogExt = @".LOG";
+                DateTime dtNow = DateTime.Now;
+                string strDate = dtNow.ToString("yyyy-MM-dd");
+                string strPath = String.Format("{0}{1}{2}", m_strLogPrefix, strDate, m_strLogExt);
+                string strDir = Path.GetDirectoryName(strPath);
+                DirectoryInfo diDir = new DirectoryInfo(strDir);
 
+                if (!diDir.Exists)
+                {
+                    diDir.Create();
+                    diDir = new DirectoryInfo(strDir);
+                }
+
+                if (diDir.Exists)
+                {
+                    System.IO.StreamWriter swStream = File.AppendText(strPath);
+                    string strLog = String.Format("{0}: {1}", dtNow.ToString("MM/dd/yyyy hh:mm:ss.fff"), strMsg);
+                    swStream.WriteLine(strLog);
+                    swStream.Close(); ;
+                }
+            }
+            catch (System.Exception e)
+            {
+                HistoryLog(e.Message);
+            }
+        }
     }
 }
