@@ -91,7 +91,7 @@ namespace SampleDemo.SAP
             ioiSession.destroy();
         }
 
-        #region SessionEventListener ¸â¹ö
+        #region SessionEventListener ë©¤ë²„
 
         void SessionEventListener.onConnect(Session ss)
         {

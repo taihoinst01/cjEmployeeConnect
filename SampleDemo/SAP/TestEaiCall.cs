@@ -20,11 +20,11 @@ namespace SampleDemo.SAP
             {
                 H101EaiCall eai = new H101EaiCall();
 
-                // Ã¤³Î½Ã½ºÅÛ ±¸ºĞ
+                // ì±„ë„ì‹œìŠ¤í…œ êµ¬ë¶„
                 String systemID = "CJ_HelpDesk";
-                // ÀÎÅÍÆäÀÌ½ºID ==> ¿¬°è ¾÷¹«¸¶´Ù Á¤ÀÇµÊ
+                // ì¸í„°í˜ì´ìŠ¤ID ==> ì—°ê³„ ì—…ë¬´ë§ˆë‹¤ ì •ì˜ë¨
                 String interfaceID = "MxZSAP_PASSCHANGE_EKP";
-                // EAIÈ£ÃâÇÁ·Î±×·¥¸í ==> ±¸ºĞ°¡´ÉÇÑ ÇÁ·Î±×·¥¸í
+                // EAIí˜¸ì¶œí”„ë¡œê·¸ë¨ëª… ==> êµ¬ë¶„ê°€ëŠ¥í•œ í”„ë¡œê·¸ë¨ëª…
                 String sessionName = "CJ_CHATBOT";
 
                 //String data = "<?xml version='1.0' encoding='UTF-8'?>";
@@ -44,9 +44,9 @@ namespace SampleDemo.SAP
                 //data = data + "</INPUT_DATA>";
                 //data = data + "</EAI_REQUEST>";
 
-                //Àü»ç ERP(PRD) -> CJ_SAP(°³¹ß¼­¹ö cjerpdev / 52.2.199.15)
-                //Àü»ç BI(BIP) -> CJ_BI(°³¹ß¼­¹ö cjbidev / 52.2.199.6)
-                //ÇØ¿Ü BI(BW1) -> CJG_BI(°³¹ß¼­¹ö globwdev / 52.2.199.23)
+                //ì „ì‚¬ ERP(PRD) -> CJ_SAP(ê°œë°œì„œë²„ cjerpdev / 52.2.199.15)
+                //ì „ì‚¬ BI(BIP) -> CJ_BI(ê°œë°œì„œë²„ cjbidev / 52.2.199.6)
+                //í•´ì™¸ BI(BW1) -> CJG_BI(ê°œë°œì„œë²„ globwdev / 52.2.199.23)
 
                 String data = " { ";
                 //data = data + "   'EAI_REQUEST': { ";
@@ -55,7 +55,7 @@ namespace SampleDemo.SAP
                 data = data + "       { ";
                 data = data + "       \"REQUEST_SYSTEM\": \"CJ_HelpDesk\", ";
                 data = data + "       \"UUID\": \"CJ_CHATBOT_" + System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "\", ";
-                //data = data + "       \"OPTIONAL_1\": \"CJ_SAP / CJ_BI / CJG_BI (ÀÀ´ä½Ã½ºÅÛ¿¡ µû¶ó ¼±ÅÃ)\", ";
+                //data = data + "       \"OPTIONAL_1\": \"CJ_SAP / CJ_BI / CJG_BI (ì‘ë‹µì‹œìŠ¤í…œì— ë”°ë¼ ì„ íƒ)\", ";
                 data = data + "       \"OPTIONAL_1\": \"CJG_BI\", ";
                 data = data + "       \"OPTIONAL_2\": \"CHATBOT\", ";
                 data = data + "       \"OPTIONAL_3\": \"\", ";
