@@ -78,8 +78,11 @@ namespace SampleDemo
                     string userId = "";
                     string sabun = "";
                     string reissue = "";
-                     
+
                     string sapInitResult = tec.call(userId, sabun, reissue);
+                    byte[] bytes = Encoding.Default.GetBytes(sapInitResult);
+                    sapInitResult = Encoding.UTF8.GetString(bytes);
+                    
                     PlainText = sapInitResult;
                 }
                 await context.Response.WriteAsync(PlainText);
