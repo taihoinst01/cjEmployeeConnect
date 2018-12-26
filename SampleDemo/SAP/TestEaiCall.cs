@@ -34,6 +34,8 @@ namespace SampleDemo.SAP
                 data = data + "<UUID>CJ_CHATBOT_" + System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "</UUID>";
                 data = data + "<OPTIONAL_1>CJ_SAP</OPTIONAL_1>";
                 data = data + "<OPTIONAL_2>CHATBOT</OPTIONAL_2>";
+                data = data + "<OPTIONAL_3>CHATBOT</OPTIONAL_3>";
+                data = data + "<OPTIONAL_4>CHATBOT</OPTIONAL_4>";
                 data = data + "</INTERFACE_INFO>";
                 data = data + "<INPUT_DATA>";
                 data = data + "<P_ID>chatbot01</P_ID>";
