@@ -73,7 +73,6 @@ namespace SampleDemo.SAP
                 String repData = eai.sendMessage(sessionName, systemID, interfaceID, data, 60000);
                 HistoryLog("repData = " + repData);
                 //JObject sapJson = new JObject();
-
                 //String repData = "bbb";
 
                 //Console.WriteLine("------Reply Message...\n" + repData);
