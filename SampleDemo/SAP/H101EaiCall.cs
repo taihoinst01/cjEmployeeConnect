@@ -28,7 +28,7 @@ namespace SampleDemo.SAP
                 ioiSession = Transceiver.createSession(sessionName, sessionMode);
                 ioiSession.addSessionEventListener(this);
                 ioiSession.setAutoRecovery(true);
-                ioiSession.setDefaultTTL(30000);
+                ioiSession.setDefaultTTL(60000);
                 ioiSession.connect(connectString);
             }
             catch (SessionException ex)
