@@ -49,21 +49,21 @@ namespace SampleDemo.SAP
                 //해외 BI(BW1) -> CJG_BI(개발서버 globwdev / 52.2.199.23)
 
                 String data = " { ";
-                data = data + "   'EAI_REQUEST': { ";
-                data = data + "     'INTERFACE_INFO': { ";
-                //data = data + "       'REQUEST_SYSTEM': 'CJ_CHATBOT', ";
-                data = data + "       'REQUEST_SYSTEM': 'CJ_HelpDesk', ";
-                data = data + "       'UUID': 'CJ_CHATBOT_" + System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "', ";
-                //data = data + "       'OPTIONAL_1': 'CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)', ";
-                data = data + "       'OPTIONAL_1': 'CJ_SAP', ";
-                data = data + "       'OPTIONAL_2': 'CHATBOT', ";
-                data = data + "       'OPTIONAL_3': '', ";
-                data = data + "       'OPTIONAL_4': '' ";
+                data = data + "   \"EAI_REQUEST\": { ";
+                data = data + "     \"INTERFACE_INFO\": { ";
+                //data = data + "       \"REQUEST_SYSTEM\": \"CJ_CHATBOT\", ";
+                data = data + "       \"REQUEST_SYSTEM\": \"CJ_HelpDesk\", ";
+                data = data + "       \"UUID\": \"CJ_CHATBOT_" + System.DateTime.Now.ToString("yyyyMMddhhmmssff") + "\", ";
+                //data = data + "       \"OPTIONAL_1\": \"CJ_SAP / CJ_BI / CJG_BI (응답시스템에 따라 선택)\", ";
+                data = data + "       \"OPTIONAL_1\": \"CJ_SAP\", ";
+                data = data + "       \"OPTIONAL_2\": \"CHATBOT\", ";
+                data = data + "       \"OPTIONAL_3\": \"\", ";
+                data = data + "       \"OPTIONAL_4\": \"\" ";
                 data = data + "     }, ";
-                data = data + "     'INPUT_DATA': { ";
-                data = data + "       'P_ID': 'chatbot01',  ";
-                data = data + "       'P_NUMxP_PERNR': '123456',";
-                data = data + "       'P_TEXT': 'ABCDEFGHI' ";
+                data = data + "     \"INPUT_DATA\": { ";
+                data = data + "       \"P_ID\": \"chatbot01\",  ";
+                data = data + "       \"P_NUMxP_PERNR\": \"123456\",";
+                data = data + "       \"P_TEXT\": \"ABCDEFGHI\" ";
                 data = data + "     } ";
                 data = data + "   } ";
                 data = data + " } ";
