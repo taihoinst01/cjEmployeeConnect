@@ -11,7 +11,8 @@ namespace SampleDemo.SAP
     class H101EaiCall : SessionEventListener
     {
         //private const String connectString = "52.2.198.170:10101";  // EAI DEV Server IP Address
-        private const String connectString = "scmbodev:10101";  // x
+        //private const String connectString = "scmbodev:10101";  // x
+        private const String connectString = "scmbo:10101";  // x
         //private const String connectString = "scmbodev.cjad.net:10101";  // x
         //private const String connectString = "http://scmbodev.cjad.net:10101";  // x
         //private const String connectString = "scmbo_dev.cjad.net:10101";  // x
