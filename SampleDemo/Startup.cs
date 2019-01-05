@@ -49,7 +49,7 @@ namespace SampleDemo
                     string KeyStr = "CEJKSP";
 
                     string encryptedText = id.Replace("?P=", "");
-
+                    encryptedText = HttpUtility.UrlDecode(encryptedText);
                     // CJWKEY 로  8evVae2ekt7WtC2umaHAqYVyhf2W9eNA 을 decrypt 결과는 cjwsampleuser 입니다. 
                     // KeyStr ="CJWKEY";
                     //string encryptedText = "g1USFCLOzazH1TKqMb+jTvvuG1gyo4iW";
