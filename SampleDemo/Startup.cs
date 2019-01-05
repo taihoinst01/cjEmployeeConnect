@@ -62,7 +62,9 @@ namespace SampleDemo
                     //get방식 진행이 된다고함
                     //SMART CJ
                     string encKey = "WC00000075531151";     // 복호화 Key 별도 전달
+                    HistoryLog("encrypt_uId1" + id.Replace("?M=", ""));
                     string encrypt_uId = HttpUtility.UrlDecode(id.Replace("?M=", ""));
+                    HistoryLog("encrypt_uId1" + encrypt_uId);
                     string decrypt_uId = SmartCJ.SSO.Utils.Decrypt(encrypt_uId, encKey);		// 복호화된 CJ월드 로그인ID
 
                     PlainText = decrypt_uId;
